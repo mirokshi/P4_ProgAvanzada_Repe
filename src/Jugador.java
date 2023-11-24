@@ -1,5 +1,9 @@
 public class Jugador implements Comparable<Jugador> {
 
+    public enum Posicio {
+        Base,Escorta,Aler,AlerPivot,Pivot
+    }
+
     Posicio pos;
     int puntuacio;
 
@@ -14,13 +18,7 @@ public class Jugador implements Comparable<Jugador> {
     @Override
     public int compareTo(Jugador jugador){
         if (pos==jugador.pos){
-            if (puntuacio==jugador.puntuacio){
-                return 0;
-            }else if (puntuacio<jugador.puntuacio){
-                return -1;
-            }else{
-                return 1;
-            }
+            return Integer.compare(puntuacio, jugador.puntuacio);
         }else{
             return -1;
         }
