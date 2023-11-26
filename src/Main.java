@@ -9,9 +9,11 @@ public class Main {
 
         System.out.println("Opcions:");
         System.out.println("1.- Inserir Jugador");
-        System.out.println("2.- Eliminar Jugador");
-        System.out.println("3.- Visualitzar un dels dos arbres");
-        System.out.println("4.- Clonar");
+        if (arbre.cardinalitat()!=0){
+            System.out.println("2.- Eliminar Jugador");
+            System.out.println("3.- Visualitzar un dels dos arbres");
+            System.out.println("4.- Clonar");
+        }
         System.out.println("5.- Acabar");
         System.out.println("Tria una opció [1,5]");
 
@@ -37,7 +39,20 @@ public class Main {
     }
 
     private static void inserirJugador(){
+        System.out.println("Indica la posició del jugador que vols inserir");
 
+        System.out.println("1.- Base");
+        System.out.println("2.- Escorta");
+        System.out.println("3.- Aler");
+        System.out.println("4.- AlerPivot");
+        System.out.println("5.- Pivot");
+        System.out.println("Indica la seva posició [1,5]");
+        int posicio = console.nextInt();
+        System.out.println("Indica la seva puntuació [0,1000]");
+        int puntuacio = console.nextInt();
+
+        Jugador jugador = new Jugador(posicio,puntuacio);
+        arbre.inserir(jugador);
     }
 
     private static void eliminarJugador() {
