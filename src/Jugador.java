@@ -1,8 +1,6 @@
 public class Jugador implements Comparable<Jugador>{
 
-    public enum Posicio {
-        Base,Escorta,Aler,AlerPivot,Pivot
-    }
+
 
     Posicio posicio;
     int puntuacio;

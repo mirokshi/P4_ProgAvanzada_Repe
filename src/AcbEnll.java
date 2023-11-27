@@ -199,6 +199,7 @@ public class AcbEnll<E extends Comparable<E>> implements Acb,Cloneable {
 
     @Override
     public Comparable arrel() throws ArbreException {
+        if(arrel==null) throw new ArbreException("Arbre buit");
         return (Comparable) arrel;
     }
 
